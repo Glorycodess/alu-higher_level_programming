@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(0, 99):
-    print("{} = {}".format(i, hex(i)))
+for i in range(97, 123):
+    if i in [101, 113]:
+        continue
+    print("{}".fformat(chr(i)), end='')
