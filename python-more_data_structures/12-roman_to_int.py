@@ -12,7 +12,9 @@ def roman_to_int(roman_string):
     length = len(roman_string)
 
     for i in range(length):
-        if i < length - 1 and roman_to_int_map[roman_string[i]] < roman_to_int_map[roman_string[i + 1]]:
+        if (i < length - 1 and
+                roman_to_int_map[roman_string[i]] <
+                roman_to_int_map[roman_string[i + 1]]):
             total -= roman_to_int_map[roman_string[i]]
         else:
             total += roman_to_int_map[roman_string[i]]
