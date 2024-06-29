@@ -1,3 +1,5 @@
+#!/bin/usr/python3
+def add_tuple(tuple_a=(), tuple_b=()):
 # Ensure tuple_a has at least two elements, filling with 0 if necessary
     if len(tuple_a) < 2:
         tuple_a += (0, 0)
