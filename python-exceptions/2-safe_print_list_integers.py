@@ -11,11 +11,9 @@ def safe_print_list_integers(my_list=[], x=0):
         for item in range(x):
             print("{:d}".format(my_list[item]), end='')
             num += 1
-        print()
-    except (ValueError, TypeError):
-        pass
     except IndexError:
-        print()
+        pass
+    print()
+    if x > list_length:
         raise IndexError("list index out of range")
-
     return num
