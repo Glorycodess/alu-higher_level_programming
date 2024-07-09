@@ -1,20 +1,13 @@
 #!/usr/bin/python3
 
-  
-def safe_print_list_integers(my_list=[], x=0):
-    num = 0
-    list_length = 0
 
-    for _ in my_list:
-        list_length += 1
+def replace_in_list(my_list, idx, element):
+    if idx < 0:
+        return my_list
+    elif idx > len(my_list) - 1:
+        return my_list
 
-    try:
-        for item in range(x):
-            print("{:d}".format(my_list[item]), end='')
-            num += 1
-    except IndexError:
-        pass
-    print()
-    if x > list_length:
-        raise IndexError("list index out of range")
-    return num
+    for i in range(len(my_list)):
+        if i == idx:
+            my_list[i] = element
+            return my_list
