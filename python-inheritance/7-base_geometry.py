@@ -3,14 +3,12 @@
 This module defines a class BaseGeometry.
 """
 
-
 class BaseGeometry:
     """A class for geometry operations."""
 
     def area(self):
-        """Raises an exception indicating that the area method \
-                is not implemented."""
-        raise Exception("area() is not implemented")
+        """Raises an exception indicating that the area method is not implemented."""
+        raise NotImplementedError("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
